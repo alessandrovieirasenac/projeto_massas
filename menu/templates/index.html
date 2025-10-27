@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  {% load static %}
+  <link rel="shortcut icon" href="{% static '../static/favicon.png' %}" type="">
+
+  <title>The Prime Burger</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static '../static/css/bootstrap.css' %}" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="{% static '../static/css/font-awesome.min.css' %}" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static '../static/css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static '../static/css/responsive.css' %}" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div class="hero_area" id="home">
+    <div class="bg-box">
+      <img src="{% static '../static/hero-bg.jpg' %}" alt="">
+    </div>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="#home">
+            <span>
+                The Prime Burger
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mx-auto ">
+              <li class="nav-item active">
+                <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#promocoes">Promoções</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#menu">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sobre">Sobre nós</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#reserve">Reserve Aqui</a>
+              </li>
+            </ul>
+          </div>
+          <a class="nav-link active" href="{% url 'login' %}"><img src = "{% static '../static/cadeado.png' %}" width="20%" height="20%"></a>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                        The Prime Burger
+                    </h1>
+                    <p style="font-size: 20px; text-align: justify; text-indent: 3%;">
+                        Bem-vindo à The Prime Burger, onde cada hambúrguer é preparado com ingredientes selecionados e grelhado no ponto perfeito para você.
+                    </p>
+                    <p style="font-size: 20px; text-align: justify; text-indent: 3%;">
+                        Nossa missão é oferecer uma experiência gastronômica única, combinando sabor, qualidade e um toque de exclusividade.
+                    </p>
+                    <p style="font-size: 20px; text-align: justify; text-indent: 3%;">
+                        Aqui, você encontra hambúrgueres artesanais suculentos, acompanhamentos irresistíveis e molhos especiais — tudo feito com paixão e cuidado.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- offer section -->
+
+  <section class="offer_section layout_padding-bottom" id="promocoes">
+    <div class="heading_container heading_center">
+      <div class = "row">
+        <div class = "cols">
+          <h2>
+            Promoções
+          </h2>
+        </div>
+        <div class = "cols">
+          <a href = "#home">
+            <img src="{% static '../static/seta.png' %}" alt="" width="30px" height="30px">
+          </a>
+        </div>
+    </div>
+    </div>
+    <div class="offer_container">
+      <div class="container ">
+        <div class="row">
+          <div class="col-md-6  ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static '../static/o1.jpg' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5 style="text-align: center;">
+                    Toda Quinta-feira é dia de
+                </h5>
+                <h6>
+                  <span>20%</span> Off
+                </h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6  ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static '../static/o2.jpg' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5 style="text-align: center;">
+                  No Dia da Pizza você tem
+                </h5>
+                <h6>
+                  <span>15%</span> Off
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end offer section -->
+
+  <!-- food section -->
+
+  <section class="food_section layout_padding-bottom" id="menu">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <div class = "row">
+          <div class = "cols">
+            <h2>
+              Nosso Menu
+            </h2>
+          </div>
+          <div class = "cols">
+            <a href = "#home">
+              <img src="{% static '../static/seta.png' %}" alt="" width="30px" height="30px">
+            </a>
+          </div>
+      </div>
+
+      <div class="filters-content">
+        <div class="row grid">
+          <div class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{% static '../static/f1.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5 style="text-align: center;">
+                    Pizza a Moda da Casa
+                  </h5>
+                  <p style="text-align: justify; text-indent: 3%;">
+                    Uma combinação exclusiva criada por nossos chefs, com molho artesanal, queijo mussarela de alta qualidade, pedaços suculentos de blend prime e um toque especial de bacon crocante e cebola caramelizada.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      R$ 80,00
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all burger">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{% static '../static/f2.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5 style="text-align: center;">
+                    Hamburguer Duplo Artesanal
+                  </h5>
+                  <p style="text-align: justify; text-indent: 3%;">
+                    Nosso blend especial de carne 100% bovina é moldado artesanalmente e grelhado no ponto perfeito, garantindo suculência e sabor inigualável. Servido no pão brioche levemente tostado, com queijo derretido e inigualável.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      R$ 35,00
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{% static '../static/f3.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5 style="text-align: center;">
+                    Pizza Marguerita
+                  </h5>
+                  <p style="text-align: justify; text-indent: 3%;">
+                    Nossa Pizza Marguerita é preparada com molho de tomate artesanal, mussarela derretida, fatias frescas de tomate e o toque inconfundível de manjericão, que realça o aroma e o sabor de cada pedaço ao sair do forno quentinha.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      R$ 70,00
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all pasta">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{% static '../static/f4.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5 style="text-align: center;">
+                    Massa ao Molho Funghi
+                  </h5>
+                  <p style="text-align: justify; text-indent: 3%;">
+                    Uma receita clássica com o toque especial da The Prime Burger. Nossa massa al dente é envolvida em um cremoso molho funghi, preparado com cogumelos selecionados, creme de leite fresco e um leve toque de manteiga e vinho branco, que realçam o sabor e a textura do prato.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      R$ 58,00
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all fries">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{% static '../static/f5.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5 style="text-align: center;">
+                    Batata Frita Especial
+                  </h5>
+                  <p style="text-align: justify; text-indent: 3%;">
+                    Nossas batatas fritas especiais são preparadas no ponto certo, com temperos exclusivos da casa e finalizadas com cheddar cremoso, bacon crocante e um toque de cebolinha fresca. Uma combinação perfeita para acompanhar seu burger ou para saborear sozinha!
+                  </p>
+                  <div class="options">
+                    <h6>
+                      R$ 35,00
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{% static '../static/f6.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5 style="text-align: center;">
+                    Pizza de Bacon com Ovos
+                  </h5>
+                  <p style="text-align: justify; text-indent: 3%;">
+                    Nossa Pizza de Bacon com Ovos é preparada com molho de tomate artesanal, mussarela derretida, bacon crocante e ovos frescos, assados até atingirem o ponto perfeito. O contraste entre o sabor defumado do bacon e a cremosidade dos ovos é uma verdadeira explosão de sabor.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      R$ 75,00
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all burger">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{% static '../static/f7.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5 style="text-align: center;">
+                    Hamburguer de Salmão
+                  </h5>
+                  <p style="text-align: justify; text-indent: 3%;">
+                    Nosso Hambúrguer de Salmão é preparado com salmão fresco selecionado, temperado com ervas finas e toque cítrico, garantindo um sabor marcante e sofisticado. Servido no pão brioche artesanal, com alface crocante, tomate fresco e o nosso molho especial de dill.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      R$ 42,00
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all burger">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{% static '../static/f8.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5 style="text-align: center;">
+                    Hamburguer de Frango
+                  </h5>
+                  <p style="text-align: justify; text-indent: 3%;">
+                    Nosso Hambúrguer de Frango Crocante é feito com peito de frango selecionado, empanado na medida certa e frito até ficar dourado e crocante. Servido no pão brioche macio, acompanhado de alface fresca, tomate e nosso molho especial da casa. Uma explosão de sabor a cada mordida.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      R$ 34,00
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all pasta">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="{% static '../static/f9.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5 style="text-align: center;">
+                    Massa de Tortellini de Presunto
+                  </h5>
+                  <p style="text-align: justify; text-indent: 3%;">
+                    Nosso Tortellini é recheado com presunto selecionado e envolto em uma massa fresca e macia. Servido com molho cremoso à base de queijo, onde cada garfada entrega sabor, textura e sofisticação. Finalizado com queijo parmesão ralado e uma pitada de ervas frescas.
+                  </p>
+                  <div class="options">
+                    <h6>
+                      R$ 60,00
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end food section -->
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding" id="sobre">
+    <div class="heading_container heading_center">
+      <div class = "row">
+        <div class = "cols">
+          <h2>
+            Sobre Nós
+          </h2>
+        </div>
+        <div class = "cols">
+          <a href = "#home">
+            <img src="{% static '../static/seta.png' %}" alt="" width="30px" height="30px">
+          </a>
+        </div>
+    </div>
+    </div>
+    <div class="container  ">
+
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="{% static '../static/about-img.png' %}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2 style="text-align: center;">
+                The Prime Burger — o sabor em seu ponto máximo.
+              </h2>
+            </div>
+            <p style="text-align: justify; text-indent: 3%;">
+              Aqui, cada prato é uma experiência gastronômica única. Nossos hambúrgueres artesanais são preparados com ingredientes selecionados e grelhados no ponto perfeito. As pizzas são assadas com massa leve e molho artesanal, trazendo combinações irresistíveis de sabores. E as massas? Sempre al dente, servidas com molhos cremosos e receitas exclusivas. 
+            </p>
+            <p style="text-align: justify; text-indent: 3%;">
+              Tudo é feito com paixão, qualidade e um toque de exclusividade — do preparo à apresentação.
+            </p>
+            <p style="text-align: justify; text-indent: 3%;">
+              📍 Escolha seu prato, monte do seu jeito e descubra o verdadeiro significado de ser Prime.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- book section -->
+  <section class="book_section layout_padding" id = "reserve">
+    <div class="container">
+      <div class="heading_container">
+        <div class = "row">
+          <div class = "cols">
+            <h2>
+              Reserve
+            </h2>
+          </div>
+          <div class = "cols">
+            <a href = "#home">
+              <img src="{% static '../static/seta.png' %}" alt="" width="30px" height="30px">
+            </a>
+          </div>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <form action = "{% url 'salvar' %}" method = "POST">
+              {% csrf_token %}
+              <div>
+                <input type="text" class="form-control" placeholder="Seu Nome" name = "nome"/>
+              </div>
+              <div>
+                <input type="text" class="form-control" placeholder="Seu whatsapp" name = "telefone"/>
+              </div>
+              <div>
+                <input type="email" class="form-control" placeholder="Seu E-Mail" name = "email"/>
+              </div>
+              <div>
+                <select class="form-control nice-select wide" name = "qtd">
+                  <option value="" disabled selected>
+                    Quantidade de Pessoas?
+                  </option>
+                  <option value="1">
+                    1
+                  </option>
+                  <option value="2">
+                    2
+                  </option>
+                  <option value="3">
+                    3
+                  </option>
+                  <option value="4">
+                    4
+                  </option>
+                  <option value="5">
+                    5
+                  </option>
+                  <option value="6">
+                    6
+                  </option>
+                </select>
+              </div>
+              <div>
+                <input type="date" class="form-control" name = "data">
+              </div>
+              <div class="btn_box">
+                <button type = "submit" onclick="alert('Dados Enviados com Sucesso!')">
+                  Confirmar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="map_container ">
+            <div id="googleMap" style="margin-left: 10%;">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.2860594905583!2d-43.26110242380671!3d-22.902817437730818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997dd3db2d148b%3A0x67e6fc0cf3e254a4!2sSenac%20Centro%20Polit%C3%A9cnico%20Riachuelo!5e0!3m2!1spt-BR!2sbr!4v1761168866349!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end book section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-col">
+          <div class="footer_contact">
+            <h4>
+              Contato
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  R. Vinte e Quatro de Maio, 543 - Riachuelo, Rio de Janeiro - RJ, 20950-090
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  (21)2018-9032
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  primeburger@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <div class="footer_detail">
+            <a href="" class="footer-logo">
+              The Prime Burger
+            </a>
+            <p>
+              O local ideal para encontros entre amigos, momentos em família ou um jantar especial.
+              Localizada em uma área de fácil acesso, a The Prime Burger é o lugar perfeito para saborear boa comida e viver bons momentos.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <h4>
+            Horário de Funcionamento
+          </h4>
+          <p>
+            Todos os dias
+          </p>
+          <p>
+            18:00h - 00:00h 
+          </p>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>
+          &copy; <span id="displayYear"></span> Todos os direitos reservados para
+          <a href="https://html.design/">Alessandro Vieira</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="{% static '../static/js/jquery-3.4.1.min.js' %}"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script src="{% static '../static/js/bootstrap.js' %}"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- isotope js -->
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- custom js -->
+  <script src="{% static '../static/js/custom.js' %}"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>

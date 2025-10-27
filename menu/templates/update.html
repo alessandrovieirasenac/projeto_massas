@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Prime Burger</title>
+    </head>
+    <body style="width: 60%; margin-left: 20%; margin-top: 2%;">
+        <h3 style="text-align: center; font-size: 18px;">Listagem de Reservas - Edição dos Dados Cadastrados</h3>
+        <form action = "{% url 'update' reserva.id %}" method = "POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-12">
+                    <label class="form-label">Informe o Nome</label>
+                    <input type="text" class="form-control" aria-label="First name" name = "nome" value = "{{reserva.nome}}">
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Informe o Telefone</label>
+                    <input type="text" class="form-control" aria-label="Last name" name = "telefone" value = "{{reserva.telefone}}">
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Informe o Email</label>
+                    <input type="text" class="form-control" aria-label="Last name" name = "email" value = "{{reserva.email}}">
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Informe a Quantidade de Pessoas</label>
+                    <select class="form-control" aria-label="Quantidade de Pessoas" name="qtd">
+                        {% for i in "123456"|make_list %}
+                            {% with j=forloop.counter %}
+                                <option value="{{ j }}" {% if j == reserva.qtd %}selected{% endif %}>
+                                    {{ j }}
+                                </option>
+                            {% endwith %}
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Informe a Data da Reserva</label>
+                    <input type="date" class="form-control" aria-label="Last name" name = "data" value="{{ reserva.data|date:'Y-m-d' }}">
+                </div>
+                <div class="col-12">
+                    <br>
+                    <button type="submit" class="btn btn-primary">SALVAR</button>
+                </div>
+            </div>
+        </form>
+</body>
+</html>
