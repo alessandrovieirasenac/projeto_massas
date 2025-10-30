@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from .views import home, login, lista, salvar, delete, editar, update
+from .views import home, login, lista, salvar, delete, editar, update, salvar_usuario, cadastro
 
 urlpatterns = [
     path('', home, name = "index"),
@@ -10,4 +10,6 @@ urlpatterns = [
     path('apagar/<int:id>', delete, name = "delete"),
     path('editar/<int:id>', editar, name = "editar"),
     path('update/<int:id>', update, name = "update"),
+    path('salvar_usuario/', salvar_usuario, name = "salvar_usuario"),
+    path('cadastro/', cadastro, name = "cadastro"),
 ]

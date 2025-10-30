@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Prime Burger</title>
+    </head>
+    <body style="width: 40%; margin-left: 30%; margin-top: 2%;">
+        <h3 style="text-align: center; font-size: 28px;">Cadastro de Usuários</h3>
+        <form action = "{% url 'salvar_usuario' %}" method = "POST" style="font-size: 20px;">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-12">
+                    <label class="form-label">Informe o Login</label>
+                    <input type="text" class="form-control" aria-label="First name" name = "login" style="font-size: 18px;">
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Informe a Senha</label>
+                    <input type="password" class="form-control" aria-label="Last name" name = "senha" style="font-size: 18px;">
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Informe a Tipo de Usuário</label>
+                    <select class="form-control" aria-label="Quantidade de Pessoas" name="tipo" style="font-size: 18px;">
+                        <option value="" disabled selected>
+                            Selecione...
+                          </option>
+                          <option value="Administrador">
+                            Administrador
+                          </option>
+                          <option value="Usuario">
+                            Usuário
+                          </option>
+                        </select>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <br>
+                    <button type="submit" class="btn btn-primary">SALVAR</button>
+                </div>
+            </div>
+        </form>
+</body>
+</html>

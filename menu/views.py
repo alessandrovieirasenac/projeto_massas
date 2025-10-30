@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Reserva
+from .models import Reserva, Usuario
 
 # Create your views here.
 
@@ -7,18 +7,26 @@ def home(request):
     reservas = Reserva.objects.all()
     return render(request,"index.html",{"reservas":reservas})
 
+def cadastro(request):
+    usuarios = Usuario.objects.all()
+    return render(request,"cadastro.html",{"usuarios":usuarios})
+
 def login(request):
     return render(request,"login.html")
 
 def lista(request):
-    vlogin = request.POST.get("login")
-    vsenha = request.POST.get("senha")
-    if vlogin == "admin" and vsenha == "admin":
-        reservas = Reserva.objects.all()
-        return render(request,"lista.html",{"reservas":reservas})
+    if request.method == "POST":
+        vlogin = request.POST.get("login")
+        vsenha = request.POST.get("senha")
+        try:
+            usuario = Usuario.objects.get(login=vlogin,senha=vsenha)
+            reservas = Reserva.objects.all()
+            return render(request, "lista.html", {"reservas": reservas, "usuario": usuario})
+        except Usuario.DoesNotExist:
+            return render(request, "index.html", {"erro": "Usuário ou senha inválidos"})
     else:
         reservas = Reserva.objects.all()
-        return render(request,"index.html",{"reservas":reservas})
+        return render(request, "index.html", {"reservas": reservas})
     
 def salvar(request):
     vnome = request.POST.get("nome")
@@ -29,6 +37,14 @@ def salvar(request):
     Reserva.objects.create(nome=vnome,telefone=vtelefone,email=vemail,qtd=vqtd,data=vdata)
     reservas = Reserva.objects.all()
     return render(request,"index.html",{"reservas":reservas})
+
+def salvar_usuario(request):
+    vlogin = request.POST.get("login")
+    vsenha = request.POST.get("senha")
+    vtipo = request.POST.get("tipo")
+    Usuario.objects.create(login=vlogin,senha=vsenha,tipo=vtipo)
+    usuarios = Usuario.objects.all()
+    return render(request,"login.html",{"usuarios":usuarios})
 
 def delete(request, id):
     reserva = Reserva.objects.get(id = id)
