@@ -29,14 +29,26 @@
                 <td>{{reserva.telefone}}</td>
                 <td>{{reserva.qtd}}</td>
                 <td>{{reserva.data}}</td>
-                <td><a href = "{% url 'editar' reserva.id %}">
-                    {% load static %}
-                    <img src="{% static '../static/editing.png' %}" width="20px" height="20px">
-                </a></td>
-                <td><a href = "{% url 'delete' reserva.id %}" onclick="return confirm('Confirma a Exclusão?')">
-                    {% load static %}
-                      <img src="{% static '../static/delete.png' %}" width="20px" height="20px">
-                    </a></td>
+                {% if usuario.tipo == "Administrador" %}
+                  <td><a href = "{% url 'editar' reserva.id %}">
+                      {% load static %}
+                      <img src="{% static '../static/editing.png' %}" width="20px" height="20px">
+                  </a></td>
+                  <td><a href = "{% url 'delete' reserva.id %}" onclick="return confirm('Confirma a Exclusão?')">
+                      {% load static %}
+                        <img src="{% static '../static/delete.png' %}" width="20px" height="20px">
+                      </a></td>
+                {% else %}
+                <td>
+                  {% load static %}
+                  <img src="{% static '../static/editing.png' %}" width="20px" height="20px">
+                </td>
+                <td>
+                  {% load static %}
+                    <img src="{% static '../static/delete.png' %}" width="20px" height="20px">
+                </td>      
+
+                {% endif %}
               </tr>
               {% endfor %}
             </tbody>
