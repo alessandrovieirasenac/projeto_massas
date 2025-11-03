@@ -1,2 +1,0 @@
-echo "django==5.1 djangorestframework
-requests" > requirements.txt
